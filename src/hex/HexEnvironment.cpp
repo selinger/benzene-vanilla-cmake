@@ -18,7 +18,7 @@ HexEnvironment::HexEnvironment(int width, int height)
 void HexEnvironment::NewGame(int width, int height)
 {
     if (brd->GetPosition().Width() != width 
-        && brd->GetPosition().Height() != height)
+        || brd->GetPosition().Height() != height)
     {
         /** @todo Make board resizable? Until then, make sure all
             HexBoard parameters are copied here! */
